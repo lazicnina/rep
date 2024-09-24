@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: flex;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    position:fixed;
+    padding:25px;
+    background-color:#181818;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    transition: all .50s ease;
+}
+header .logo{
+    padding: 0 50px;
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+header ul{
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+header ul a{
+    position: relative;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+}
+header ul a::before{
+    content: '';
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:#a289be;
+    transition: 0.3s;
+}
+header ul a:hover,
+header ul a.active{
+    color: #a289be;
+}
+header ul a:hover::before{
+    width: 100%;
+}
+header ul a.active::before{
+    width: 100%;
+}
+section{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #1A1A1B;
+}
+.section1{
+    background-size: cover;
+    background-color: #0d0d0d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.section1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#0d0d0d,transparent);
+}
+.sekcija h1{
+    text-align: left;
+    white-space: wrap;
+    position: relative;
+    font-size: 70px;
+    color:white;
+    z-index: 3;
+}
+section p{
+    position: relative;
+    font-size: 35px;
+    font-weight: 600;
+    color: #f7b094;
+    z-index: 3;
+}
+#hamburger{
+    padding-right: 30px;
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+#hamburger div{
+    width:35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2{
+    opacity: 0;
+}
+.open .bar3{
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+.mobile-menu{
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    height: calc(100vh - 50px);
+    width: 50%;
+}
+.mobile-menu li{
+    padding: 10px;
+}
+.sekcija{
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 1150px;
+    height: 500px;
+    width: 50%;
+    margin-left: 60px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+.sekcija p{
+    white-space: wrap;
+    color: #9489be;
+}
+.section1 .sekcija2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+}
+.section1 .sekcija2 img{
+    -webkit-transform: scaleX(-1);
+     transform: scaleX(-1);
+}
+.dugme{
+    position: relative;
+    background-color: #979797;
+    color:#979797;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 0.0em;
+    font-weight: 500;
+    padding: 10px 30px;
+    transition:0.5s;
+    bottom: -40px;
+    margin-right: 290px;
+}
+.dugme:hover{
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 70px var(--clr);
+}
+.dugme::before{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: #1d1d1d;
+}
+.section1 a span{
+    position: relative;
+    z-index: 1;
+}
+.section1 a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.section1 a i::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 80%;
+    width:20px;
+    height: 4px;
+    background-color: #1d1d1d;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.section1 a:hover i::before{
+    width: 30px;
+    left: 20%;
+}
+.section1 a i::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 20%;
+    width:20px;
+    height: 4px;
+    background-color: #1d1d1d;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.section1 a:hover i::after{
+    width: 30px;
+    left: 80%;
+}
+.section2{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2 .wave{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #979797;
+}
+.section2 .wave span{
+    position: absolute;
+    width: 325vh;
+    height: 325vh;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background-color:rgb(26, 26, 27);
+}
+.section2 .wave span:nth-child(1){
+    animation: animatee 5s linear infinite;
+    border-radius: 45% ;
+    background: rgba(26, 26, 27,1);
+}
+.section2 .wave span:nth-child(2){
+    animation: animatee 10s linear infinite;
+    border-radius: 40% ;
+    background: rgba(26, 26, 27,0.5);
+}
+.section2 .wave span:nth-child(3){
+    animation: animatee 10s linear infinite;
+    border-radius: 40% ;
+    background: rgba(0, 0, 0, 0.5);;
+}
+@keyframes animatee{
+    0%{
+        transform: translate(-50%,-75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-75%) rotate(360deg);
+    }
+}
+.pola{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dis{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    left: 0;
+}
+.dis span, .diss span{
+    width: 20%;
+}
+.dis p, .diss p{
+    position: relative;
+    width: 80%;
+    right: 0;
+}
+.dis .p,.dis .p2{
+    left: 140px;
+    top: 80px;
+}
+.dis .p3{
+    left: 150px;
+    top: 90px;
+}
+.dis .p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+    position: absolute;
+    background-color: rgb(209, 204, 255);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% 
+}
+.dis .p2{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(136, 139, 177);
+    opacity: 0.5;
+    border-radius: 61% 39% 70% 30% / 43% 52% 48% 57%   
+} 
+.dis a{
+    font-style: normal;
+    position: absolute;
+    left: 230px;
+    top: 200px;
+}
+.dis a, .diss a{
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    color: #000;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+    margin: 0 30px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.dis a .c, .diss a .c{
+    font-size: 70px;
+    line-height: 150px;
+}
+
+.dis p, .diss p{
+    white-space: wrap;
+    color: white;
+    font-size: 1.6rem;
+}
+.dis p{
+    width: 900px;
+    left: 200px;
+}
+.diss p{
+    width: 900px;
+    right: 200px;
+    bottom: 60px;
+}
+.diss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    right: 0;
+}
+.diss .p,.diss .p2{
+    right: 140px;
+    bottom:150px;
+}
+.diss .p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+    position: absolute;
+    background-color: rgb(230, 255, 232);
+    border-radius: 46% 54% 67% 33% / 49% 54% 46% 51%  
+}
+.diss .p2{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(164, 211, 180);
+    opacity: 0.5;
+    border-radius: 30% 70% 23% 77% / 72% 64% 36% 28%  
+} 
+.diss a{
+    position: absolute;
+    right: 240px;
+    bottom:280px;
+}
+.section3{
+    display: grid;
+    place-items: center center;
+}
+.section3 .karticke{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(400px,1fr));
+    padding:20px;
+    grid-gap: 90px;
+}
+.card{
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+.card .container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+   img{
+    width: 100%;
+    display: block;
+    border-radius:20px 20px 0 0;
+   }
+   .container:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+   }
+   .card1>.container:after{
+    background-image:linear-gradient(135deg, rgb(216, 202, 175),rgb(160, 153, 226));
+   }
+   .card2>.container:after{
+    background-image:linear-gradient(135deg, rgb(130, 130, 173),rgb(185, 62, 82));
+   }
+   .card3>.container:after{
+    background-image:linear-gradient(135deg, rgb(0, 255, 179),rgb(100, 177, 160));
+   }
+   .card h3{
+    color: white;
+    font-size: 5rem;
+   }
+   .details{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .card p{
+    text-align: center;
+    padding: 10px;
+    color: rgb(156, 156, 156);
+   }
+.section3{
+    background-color: #979797;
+}
+.card a{
+    position: relative;
+    padding: 20px 60px;
+    text-decoration: none;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34, 34, 34);
+    margin: 40px;
+    transform: 1s;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-graient(transparent, #0004);
+}
+.card a:hover{
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 60px var(--clr),
+    0 0 100px var(--clr);
+}
+.card a::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33% *var(--i));
+}
+.card a:hover::before{
+    width: 120%;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.card a::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: black;
+}
+.card a:hover::after{
+    background-color: var(--clr);
+}
+.card a span{
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    color: white;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.card a:hover span{
+    opacity: 1;
+}
+@media all and (max-width:760px){
+    header nav{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+    .mobile-menu{
+        height: 215px;
+        background-color: #181818;
+        top: 68px;
+    }
+    header{
+        padding: 10px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .section1 {
+        background-image: url(crystalis-motus-ashe-lol-skin-splash-art-phone-wallpaper-4k-uhdpaper.com-84@1@n.jpg);
+        background-size: cover;
+    }
+    .sekcija{
+        width: 100%;
+        height: 300px;   
+        margin-left: 0;   
+        border-radius: 20px;
+    }
+    .sekcija h1{
+        font-size: 30px;
+    }
+    .sekcija p{
+        font-size: 30px;
+        white-space: wrap;
+    }
+    .dugme{
+        font-size: 2rem;
+        top: 10px;
+    }
+    .dugme::before{
+        inset: 2px;
+
+    }
+    .section3{
+        height: auto;
+    }
+    .karticke{
+        display: flex;
+        flex-direction: column;
+    }
+    .karticke h3{
+        font-size: 2.5em;
+    }
+    .karticke p{
+        font-size: 1.5em;
+    }
+
+}
+
+
+
